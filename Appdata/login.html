@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - OiShaw</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html" style="color: inherit; text-decoration: none;">OiShaw</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="O que você está procurando?">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html" id="login-btn"><i class="fas fa-user"></i> Entrar</a>
+                    <a href="carrinho.html" id="cart-btn"><i class="fas fa-shopping-cart"></i> Carrinho <span
+                            class="cart-count">0</span></a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html?categoria=pc">PC Gamer</a></li>
+                    <li><a href="produtos.html?categoria=hardware">Hardware</a></li>
+                    <li><a href="produtos.html?categoria=perifericos">Periféricos</a></li>
+                    <li><a href="produtos.html?categoria=monitores">Monitores</a></li>
+                    <li><a href="produtos.html?categoria=cadeiras">Cadeiras</a></li>
+                    <li><a href="produtos.html?categoria=promocoes">Promoções</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Página de Login -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-login">Entrar</button>
+                    </form>
+                    <div class="login-links">
+                        <a href="#">Esqueci minha senha</a>
+                        <a href="cadastro.html">Criar uma conta</a>
+                    </div>
+                </div>
+                <div class="login-info">
+                    <h3>Benefícios de ter uma conta</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Acompanhe seus pedidos</li>
+                        <li><i class="fas fa-check"></i> Salve seus favoritos</li>
+                        <li><i class="fas fa-check"></i> Receba ofertas exclusivas</li>
+                        <li><i class="fas fa-check"></i> Agilize suas compras</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Nossas Lojas</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Atendimento</h3>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Meus Pedidos</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Formas de Pagamento</h3>
+                    <ul>
+                        <li>Cartão de Crédito</li>
+                        <li>Boleto Bancário</li>
+                        <li>PIX</li>
+                        <li>Transferência Bancária</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 4002-8922</li>
+                        <li><i class="fas fa-envelope"></i> contato@OiShaw.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 OiShaw - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

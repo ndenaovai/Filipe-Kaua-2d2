@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - EletroTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html" style="color: inherit; text-decoration: none;">EletroTech</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="O que você está procurando?">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="perfil.html" id="login-btn"><i class="fas fa-user"></i> <span
+                            id="user-name">Usuário</span></a>
+                    <a href="carrinho.html" id="cart-btn"><i class="fas fa-shopping-cart"></i> Carrinho <span
+                            class="cart-count">0</span></a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html?categoria=pc">PC Gamer</a></li>
+                    <li><a href="produtos.html?categoria=hardware">Hardware</a></li>
+                    <li><a href="produtos.html?categoria=perifericos">Periféricos</a></li>
+                    <li><a href="produtos.html?categoria=monitores">Monitores</a></li>
+                    <li><a href="produtos.html?categoria=cadeiras">Cadeiras</a></li>
+                    <li><a href="produtos.html?categoria=promocoes">Promoções</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Página de Perfil -->
+    <section class="profile-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Meu Perfil</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> > <span>Meu Perfil</span>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <!-- Menu Lateral -->
+                <aside class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 id="profile-user-name">Usuário</h3>
+                        <p id="profile-user-email">usuario@email.com</p>
+                        <button class="btn btn-logout" onclick="logout()">Sair</button>
+                    </div>
+
+                    <nav class="profile-menu">
+                        <a href="#dados-pessoais" class="menu-item active" data-tab="dados-pessoais">
+                            <i class="fas fa-user"></i> Dados Pessoais
+                        </a>
+                        <a href="#historico" class="menu-item" data-tab="historico">
+                            <i class="fas fa-history"></i> Histórico de Pedidos
+                        </a>
+                        <a href="#enderecos" class="menu-item" data-tab="enderecos">
+                            <i class="fas fa-map-marker-alt"></i> Meus Endereços
+                        </a>
+                        <a href="#favoritos" class="menu-item" data-tab="favoritos">
+                            <i class="fas fa-heart"></i> Lista de Desejos
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Conteúdo Principal -->
+                <main class="profile-main">
+                    <!-- Aba: Dados Pessoais -->
+                    <div id="dados-pessoais" class="tab-content active">
+                        <h2>Dados Pessoais</h2>
+                        <div class="profile-info">
+                            <div class="info-group">
+                                <label>Nome Completo</label>
+                                <p id="info-name">-</p>
+                            </div>
+                            <div class="info-group">
+                                <label>E-mail</label>
+                                <p id="info-email">-</p>
+                            </div>
+                            <div class="info-group">
+                                <label>Telefone</label>
+                                <p id="info-phone">-</p>
+                            </div>
+                            <div class="info-group">
+                                <label>CPF</label>
+                                <p id="info-cpf">-</p>
+                            </div>
+                            <div class="info-group">
+                                <label>Data de Nascimento</label>
+                                <p id="info-birthdate">-</p>
+                            </div>
+                            <button class="btn btn-edit">Editar Dados</button>
+                        </div>
+                    </div>
+
+                    <!-- Aba: Histórico de Pedidos -->
+                    <div id="historico" class="tab-content">
+                        <h2>Histórico de Pedidos</h2>
+                        <div class="orders-list" id="orders-list">
+                            <div class="empty-orders">
+                                <i class="fas fa-shopping-bag"></i>
+                                <h3>Nenhum pedido encontrado</h3>
+                                <p>Você ainda não realizou nenhuma compra.</p>
+                                <a href="produtos.html" class="btn">Fazer Compras</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aba: Endereços -->
+                    <div id="enderecos" class="tab-content">
+                        <h2>Meus Endereços</h2>
+                        <div class="addresses-list" id="addresses-list">
+                            <div class="empty-addresses">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h3>Nenhum endereço cadastrado</h3>
+                                <p>Adicione um endereço para facilitar suas compras.</p>
+                                <button class="btn btn-add-address">Adicionar Endereço</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Aba: Favoritos -->
+                    <div id="favoritos" class="tab-content">
+                        <h2>Lista de Desejos</h2>
+                        <div class="wishlist-grid" id="wishlist-grid">
+                            <div class="empty-wishlist">
+                                <i class="fas fa-heart"></i>
+                                <h3>Lista de desejos vazia</h3>
+                                <p>Adicone produtos que você deseja comprar.</p>
+                                <a href="produtos.html" class="btn">Ver Produtos</a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Nossas Lojas</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Atendimento</h3>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Meus Pedidos</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Formas de Pagamento</h3>
+                    <ul>
+                        <li>Cartão de Crédito</li>
+                        <li>Boleto Bancário</li>
+                        <li>PIX</li>
+                        <li>Transferência Bancária</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 4002-8922</li>
+                        <li><i class="fas fa-envelope"></i> contato@OiShaw.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 OiShaw - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/perfil.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
